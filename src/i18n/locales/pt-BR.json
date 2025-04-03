@@ -1,0 +1,164 @@
+{
+  "hero": {
+    "title": "Gestão Financeira Simplificada para Igrejas",
+    "subtitle": "Simplifique a administração financeira da sua igreja com nossa ferramenta intuitiva. Controle, transparência e eficiência para sua congregação.",
+    "ctaButton": "Começar Agora"
+  },
+  "navbar": {
+    "features": "Funcionalidades",
+    "benefits": "Benefícios",
+    "pricing": "Preços",
+    "contact": "Contato",
+    "login": "Entrar",
+    "knowMore": "Saiba Mais",
+    "home": "Início",
+    "testimonials": "Depoimentos"
+  },
+  "features": {
+    "title": "Funcionalidades Principais",
+    "subtitle": "Tudo o que você precisa para gerenciar suas finanças",
+    "feature1": {
+      "title": "Relatórios Detalhados",
+      "description": "Gere relatórios financeiros profissionais com um clique"
+    },
+    "feature2": {
+      "title": "Gestão de Ofertas",
+      "description": "Registre e controle todas as entradas de recursos"
+    },
+    "feature3": {
+      "title": "Controle de Despesas",
+      "description": "Monitore todos os gastos por categorias e projetos"
+    },
+    "feature4": {
+      "title": "Gestão de Membros",
+      "description": "Mantenha o cadastro de contribuintes organizado"
+    },
+    "feature5": {
+      "title": "Centros de Custo",
+      "description": "Organize suas finanças por ministérios, projetos ou departamentos para um controle mais preciso"
+    },
+    "feature6": {
+      "title": "Acesso Móvel",
+      "description": "Acesse todas as funcionalidades de qualquer dispositivo e a qualquer momento"
+    }
+  },
+  "benefits": {
+    "title": "Por que escolher nossa solução",
+    "subtitle": "Benefícios que fazem a diferença",
+    "benefit1": {
+      "title": "Facilidade de Uso",
+      "description": "Interface intuitiva que não requer conhecimentos técnicos"
+    },
+    "benefit2": {
+      "title": "Segurança Total",
+      "description": "Seus dados protegidos com a mais alta tecnologia de criptografia"
+    },
+    "benefit3": {
+      "title": "Acessível em Qualquer Lugar",
+      "description": "Acesse pelo computador, tablet ou smartphone a qualquer momento"
+    },
+    "benefit4": {
+      "title": "Suporte Dedicado",
+      "description": "Assistência rápida e personalizada para suas necessidades"
+    }
+  },
+  "testimonials": {
+    "title": "O que nossos clientes dizem",
+    "testimonial1": {
+      "text": "Este sistema transformou nossa gestão financeira. Agora temos muito mais tempo para focar no que realmente importa.",
+      "author": "Pastor Anderson Silva",
+      "church": "Igreja Batista Central"
+    },
+    "testimonial2": {
+      "text": "A transparência que conseguimos oferecer aos membros aumentou significativamente a confiança na administração.",
+      "author": "Maria Oliveira",
+      "church": "Comunidade Evangélica Vida"
+    },
+    "testimonial3": {
+      "text": "Simplesmente impressionante. Fácil de usar e com todas as funcionalidades que precisávamos.",
+      "author": "Pastor Roberto Santos",
+      "church": "Igreja Cristã Renovada"
+    }
+  },
+  "pricing": {
+    "title": "Planos e Preços",
+    "subtitle": "Escolha o plano ideal para sua igreja",
+    "currency": "R$",
+    "popularTag": "Mais Popular",
+    "defaultButton": "Começar Agora",
+    "basic": {
+      "title": "Básico",
+      "price": "R$199",
+      "period": "/mês",
+      "description": "Para pequenas congregações",
+      "features": [
+        "Até 100 membros",
+        "Relatórios básicos",
+        "Suporte por email"
+      ],
+      "button": "Selecionar Plano"
+    },
+    "standard": {
+      "title": "Padrão",
+      "price": "R$349",
+      "period": "/mês",
+      "description": "Para igrejas em crescimento",
+      "features": [
+        "Até 500 membros",
+        "Relatórios avançados",
+        "Aplicativo móvel",
+        "Suporte prioritário"
+      ],
+      "button": "Selecionar Plano"
+    },
+    "premium": {
+      "title": "Premium",
+      "price": "R$599",
+      "period": "/mês",
+      "description": "Para grandes congregações",
+      "features": [
+        "Membros ilimitados",
+        "Todas as funcionalidades",
+        "Treinamento dedicado",
+        "Suporte 24/7"
+      ],
+      "button": "Selecionar Plano"
+    }
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Estamos aqui para ajudar",
+    "description": "Estamos aqui para ajudar você a otimizar a administração financeira da sua igreja. Entre em contato conosco e descubra como o Gloria Finance pode transformar seus processos.",
+    "address": "Av. Paulista, 1000 - São Paulo, SP",
+    "phone": "+55 11 9999-9999",
+    "email": "contato (at) financaigrejas.com",
+    "whatsapp": "Ajuda pelo WhatsApp",
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "phone": "Telefone",
+      "church": "Nome da Igreja",
+      "message": "Mensagem",
+      "button": "Enviar Mensagem"
+    }
+  },
+  "cta": {
+    "title": "Pronto para simplificar suas finanças?",
+    "subtitle": "Comece hoje mesmo com período de teste gratuito",
+    "button": "Começar Agora"
+  },
+  "footer": {
+    "description": "Gloria Finance é um software especializado em administração financeira para igrejas, que otimiza processos administrativos e financeiros.",
+    "quickLinks": "Links Rápidos",
+    "support": "Suporte",
+    "contact": "Contato",
+    "helpCenter": "Central de Ajuda",
+    "faq": "Perguntas Frequentes",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço",
+    "address": "São Paulo, Brasil",
+    "phone": "+55 11 96599-0791",
+    "email": "gloriafinance (at) jaspesoft.com",
+    "copyright": "© {year} Jaspesoft CNPJ 43.716.343/0001-60. Todos os direitos reservados."
+  }
+} 

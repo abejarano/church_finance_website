@@ -1,0 +1,164 @@
+{
+  "hero": {
+    "title": "Simplified Financial Management for Churches",
+    "subtitle": "Simplify your church's financial administration with our intuitive tool. Control, transparency, and efficiency for your congregation.",
+    "ctaButton": "Get Started Now"
+  },
+  "navbar": {
+    "features": "Features",
+    "benefits": "Benefits",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "login": "Log In",
+    "knowMore": "Learn More",
+    "home": "Home",
+    "testimonials": "Testimonials"
+  },
+  "features": {
+    "title": "Main Features",
+    "subtitle": "Everything you need to manage your finances",
+    "feature1": {
+      "title": "Detailed Reports",
+      "description": "Generate professional financial reports with a single click"
+    },
+    "feature2": {
+      "title": "Offering Management",
+      "description": "Record and control all incoming resources"
+    },
+    "feature3": {
+      "title": "Expense Control",
+      "description": "Monitor all expenses by categories and projects"
+    },
+    "feature4": {
+      "title": "Member Management",
+      "description": "Keep your contributor records organized"
+    },
+    "feature5": {
+      "title": "Cost Centers",
+      "description": "Organize your finances by ministries, projects, or departments for more precise control"
+    },
+    "feature6": {
+      "title": "Mobile Access",
+      "description": "Access all features from any device and at any time"
+    }
+  },
+  "benefits": {
+    "title": "Why choose our solution",
+    "subtitle": "Benefits that make a difference",
+    "benefit1": {
+      "title": "Ease of Use",
+      "description": "Intuitive interface that requires no technical knowledge"
+    },
+    "benefit2": {
+      "title": "Total Security",
+      "description": "Your data protected with the highest encryption technology"
+    },
+    "benefit3": {
+      "title": "Accessible Anywhere",
+      "description": "Access from your computer, tablet, or smartphone anytime"
+    },
+    "benefit4": {
+      "title": "Dedicated Support",
+      "description": "Fast and personalized assistance for your needs"
+    }
+  },
+  "testimonials": {
+    "title": "What our customers say",
+    "testimonial1": {
+      "text": "This system transformed our financial management. Now we have much more time to focus on what really matters.",
+      "author": "Pastor Andrew Smith",
+      "church": "Central Baptist Church"
+    },
+    "testimonial2": {
+      "text": "The transparency we're able to offer members has significantly increased confidence in our administration.",
+      "author": "Mary Johnson",
+      "church": "Life Evangelical Community"
+    },
+    "testimonial3": {
+      "text": "Simply impressive. Easy to use and with all the features we needed.",
+      "author": "Pastor Robert Williams",
+      "church": "Renewed Christian Church"
+    }
+  },
+  "pricing": {
+    "title": "Plans and Pricing",
+    "subtitle": "Choose the ideal plan for your church",
+    "currency": "$",
+    "popularTag": "Most Popular",
+    "defaultButton": "Get Started",
+    "basic": {
+      "title": "Basic",
+      "price": "$39",
+      "period": "/month",
+      "description": "For small congregations",
+      "features": [
+        "Up to 100 members",
+        "Basic reports",
+        "Email support"
+      ],
+      "button": "Select Plan"
+    },
+    "standard": {
+      "title": "Standard",
+      "price": "$69",
+      "period": "/month",
+      "description": "For growing churches",
+      "features": [
+        "Up to 500 members",
+        "Advanced reports",
+        "Mobile app",
+        "Priority support"
+      ],
+      "button": "Select Plan"
+    },
+    "premium": {
+      "title": "Premium",
+      "price": "$119",
+      "period": "/month",
+      "description": "For large congregations",
+      "features": [
+        "Unlimited members",
+        "All features",
+        "Dedicated training",
+        "24/7 support"
+      ],
+      "button": "Select Plan"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help",
+    "description": "We're here to help you optimize your church's financial administration. Get in touch with us and discover how Gloria Finance can transform your processes.",
+    "address": "123 Main Street - New York, NY",
+    "phone": "+1 555-123-4567",
+    "email": "contact (at) churchfinance.com",
+    "whatsapp": "WhatsApp Support",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "church": "Church Name",
+      "message": "Message",
+      "button": "Send Message"
+    }
+  },
+  "cta": {
+    "title": "Ready to simplify your finances?",
+    "subtitle": "Start today with a free trial period",
+    "button": "Get Started Now"
+  },
+  "footer": {
+    "description": "Gloria Finance is a specialized software for church financial management that optimizes administrative and financial processes.",
+    "quickLinks": "Quick Links",
+    "support": "Support",
+    "contact": "Contact",
+    "helpCenter": "Help Center",
+    "faq": "FAQ",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "address": "São Paulo, Brazil",
+    "phone": "+55 11 96599-0791",
+    "email": "gloriafinance (at) jaspesoft.com",
+    "copyright": "© {year} Jaspesoft CNPJ 43.716.343/0001-60. All rights reserved."
+  }
+} 

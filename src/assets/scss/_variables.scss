@@ -1,0 +1,49 @@
+// Colors
+$primary: #7528E9; // Violeta del logo
+$secondary: #90EE90; // Verde del logo
+$accent: #FFA500; // Naranja del logo
+$background: #f9f9f9;
+$text: #333;
+$light: #ffffff;
+$gray: #f2f2f2;
+$dark-gray: #777;
+
+// Breakpoints
+$breakpoint-xs: 375px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Font sizes
+$font-size-base: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-size-2xl: 2rem;
+$font-size-3xl: 2.5rem;
+$font-size-4xl: 3rem;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-2xl: 3rem;
+$spacing-3xl: 4rem;
+
+// Border radius
+$border-radius-sm: 3px;
+$border-radius-md: 5px;
+$border-radius-lg: 10px;
+$border-radius-full: 9999px;
+
+// Transitions
+$transition-fast: 0.2s;
+$transition-normal: 0.3s;
+$transition-slow: 0.5s;
+
+// Shadows
+$shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
+$shadow-md: 0 5px 15px rgba(0, 0, 0, 0.05);
+$shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);

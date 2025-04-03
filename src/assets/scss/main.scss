@@ -1,0 +1,106 @@
+@use 'sass:color';
+@use 'variables' as *;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: $text;
+  background-color: $background;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+}
+
+// Animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+// Section Padding
+.section {
+  padding: $spacing-3xl 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: $font-size-3xl;
+  margin-bottom: $spacing-2xl;
+  color: $text;
+  font-weight: 700;
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  padding: $spacing-md $spacing-xl;
+  border-radius: $border-radius-md;
+  font-size: $font-size-base;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background-color $transition-normal, color $transition-normal;
+  text-decoration: none;
+  border: none;
+
+  &.btn-primary {
+    background-color: $primary;
+    color: $light;
+    
+    &:hover {
+      background-color: color.scale($primary, $lightness: -10%);
+    }
+  }
+
+  &.btn-secondary {
+    background-color: transparent;
+    color: $light;
+    border: 2px solid $light;
+    
+    &:hover {
+      background-color: $light;
+      color: $primary;
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: $breakpoint-md) {
+  .section-title {
+    font-size: $font-size-2xl;
+  }
+  
+  .hero h1 {
+    font-size: $font-size-3xl;
+  }
+}
+
+@media (max-width: $breakpoint-sm) {
+  .section-title {
+    font-size: $font-size-xl;
+  }
+  
+  .hero h1 {
+    font-size: $font-size-2xl;
+  }
+}
