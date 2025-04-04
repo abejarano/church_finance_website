@@ -33,7 +33,7 @@ export default defineComponent({
     GradientBackground
   },
   setup() {
-    const { t, locale } = useI18n();
+    const { t } = useI18n();
     
     // Usar computed para que los textos se actualicen cuando cambie el idioma
     const texts = computed(() => ({
@@ -117,7 +117,7 @@ export default defineComponent({
       transition: color $transition-normal;
       
       &:hover {
-        color: lighten($accent, 10%);
+        color: color.adjust($accent, $lightness: 10%);
         text-decoration: underline;
       }
     }
