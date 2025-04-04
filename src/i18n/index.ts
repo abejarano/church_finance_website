@@ -17,11 +17,6 @@ export const availableLanguages: LanguageOption[] = [
   { value: 'en', label: 'English' }
 ];
 
-// Detectar idioma preferido del navegador
-function getBrowserLanguage(): string {
-  // Idioma predeterminado siempre será portugués brasileño
-  return 'pt-BR';
-}
 
 // Tipo para las locales disponibles
 type LocaleType = 'pt-BR' | 'es' | 'en';

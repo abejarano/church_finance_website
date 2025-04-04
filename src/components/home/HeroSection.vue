@@ -6,7 +6,7 @@
           <div class="hero-badge">
             <span>{{ texts.badge }}</span>
           </div>
-          <h1>{{ texts.title }}</h1>
+          <h1><TypeWriter :text="texts.title" :speed="70" :start-delay="500" /></h1>
           <p>{{ texts.subtitle }}</p>
           <div class="hero-stats">
             <div class="stat-item">
@@ -72,10 +72,11 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useI18n } from 'vue-i18n';
+import { computed } from '@vue/runtime-core';
 import CtaButton from '@/components/common/CtaButton.vue';
 import GradientBackground from '@/components/common/GradientBackground.vue';
+import TypeWriter from '@/components/common/TypeWriter.vue';
+import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
 
