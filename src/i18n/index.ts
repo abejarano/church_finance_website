@@ -14,9 +14,9 @@ type LanguageOption = {
 
 // Definir idiomas disponibles
 export const availableLanguages: LanguageOption[] = [
-  { value: "pt-BR", label: "Português (Brasil)" },
-  { value: "es", label: "Español" },
-  { value: "en", label: "English" },
+  { value: "pt-BR", label: "Português (Brasil)", flag: "🇧🇷" },
+  { value: "es", label: "Español", flag: "🇪🇸" },
+  { value: "en", label: "English", flag: "🇬🇧" },
 ];
 
 // Tipo para las locales disponibles
