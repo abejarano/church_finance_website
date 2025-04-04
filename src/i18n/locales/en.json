@@ -115,10 +115,19 @@
     "currency": "$",
     "popularTag": "Most Popular",
     "defaultButton": "Get Started",
+    "period": "/month",
+    "buttonText": "Select Plan",
+    "guarantee": "price guarantee",
+    "freePlan": {
+      "intro": "Good news!",
+      "message": "If your church has fewer than 20 members, you can access",
+      "highlight": "ALL software features FOR FREE",
+      "ending": "without limitations.",
+      "ribbon": "NEW"
+    },
     "basic": {
       "title": "Basic",
       "price": "$39",
-      "period": "/month",
       "description": "For small congregations",
       "features": [
         "Up to 100 members",
@@ -130,7 +139,6 @@
     "standard": {
       "title": "Standard",
       "price": "$69",
-      "period": "/month",
       "description": "For growing churches",
       "features": [
         "Up to 500 members",
@@ -143,7 +151,6 @@
     "premium": {
       "title": "Premium",
       "price": "$119",
-      "period": "/month",
       "description": "For large congregations",
       "features": [
         "Unlimited members",

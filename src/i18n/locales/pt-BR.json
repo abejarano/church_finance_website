@@ -112,9 +112,19 @@
   "pricing": {
     "title": "Planos e Preços",
     "subtitle": "Escolha o plano ideal para sua igreja",
-    "currency": "R$",
+    "currency": "$",
     "popularTag": "Mais Popular",
     "defaultButton": "Começar Agora",
+    "period": "/mês",
+    "buttonText": "Selecionar Plano",
+    "guarantee": "garantia de preço",
+    "freePlan": {
+      "intro": "Boas notícias!",
+      "message": "Se sua igreja tem menos de 20 membros, você pode acessar",
+      "highlight": "GRATUITAMENTE",
+      "ending": "todo o software sem limitações.",
+      "ribbon": "NOVO"
+    },
     "basic": {
       "title": "Básico",
       "price": "R$199",

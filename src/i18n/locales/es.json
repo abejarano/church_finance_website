@@ -110,11 +110,21 @@
     }
   },
   "pricing": {
-    "title": "Planos e Preços",
-    "subtitle": "Escolha o plano ideal para sua igreja",
-    "currency": "R$",
-    "popularTag": "Mais Popular",
-    "defaultButton": "Começar Agora",
+    "title": "Plan de Cobro por Membresía y Beneficios",
+    "subtitle": "Elige el plan ideal para tu iglesia",
+    "currency": "$",
+    "popularTag": "Más Popular",
+    "defaultButton": "Comenzar Ahora",
+    "guarantee": "garantía de precio",
+    "period": "/mes",
+    "buttonText": "Seleccionar Plan",
+    "freePlan": {
+      "intro": "¡Buenas noticias!",
+      "message": "Si tu iglesia tiene menos de 20 miembros, podrás acceder",
+      "highlight": "GRATIS",
+      "ending": "a todo el software sin limitaciones.",
+      "ribbon": "NUEVO"
+    },
     "basic": {
       "title": "Básico",
       "price": "R$199",
@@ -125,7 +135,7 @@
         "Relatórios básicos",
         "Suporte por email"
       ],
-      "button": "Selecionar Plano"
+      "button": "Seleccionar Plan"
     },
     "standard": {
       "title": "Padrão",
@@ -138,7 +148,7 @@
         "Aplicativo móvel",
         "Suporte prioritário"
       ],
-      "button": "Selecionar Plano"
+      "button": "Seleccionar Plan"
     },
     "premium": {
       "title": "Premium",
@@ -151,7 +161,7 @@
         "Treinamento dedicado",
         "Suporte 24/7"
       ],
-      "button": "Selecionar Plano"
+      "button": "Seleccionar Plan"
     }
   },
   "contact": {

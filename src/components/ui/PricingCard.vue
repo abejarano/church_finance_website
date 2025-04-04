@@ -11,17 +11,20 @@
     
     <div class="price-container">
       <div class="price">
-        <span class="currency">{{ plan.currency || 'R$' }}</span>
+        <span class="currency">{{ plan.currency || '$' }}</span>
         <span class="amount">{{ plan.price }}</span>
-        <span class="period">{{ plan.period || '/mês' }}</span>
+        <span class="period">{{ plan.period || $t('pricing.period') }}</span>
       </div>
     </div>
     
     <div class="feature-list">
       <ul>
         <li v-for="(feature, index) in plan.features" :key="index">
-          <div class="feature-icon">
-            <font-awesome-icon :icon="['fas', 'check-circle']" />
+          <div class="check-circle">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="10" cy="10" r="10" fill="#10B981" />
+              <path d="M6 10L9 13L14 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
           </div>
           <span v-if="typeof feature === 'string'">{{ feature }}</span>
           <span v-else>{{ feature }}</span>
@@ -35,11 +38,13 @@
         :class="{ 'primary': plan.popular, 'secondary': !plan.popular }"
         @click="$emit('select-plan', plan.id)"
       >
-        {{ plan.buttonText || $t('pricing.defaultButton') }}
+        {{ plan.buttonText || $t('pricing.buttonText') }}
       </button>
       <p class="guarantee" v-if="plan.popular">
-        <font-awesome-icon :icon="['fas', 'shield-alt']" />
-        {{ $t('pricing.guarantee') || '7 dias de garantia' }}
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 0L10.2 5.2L16 6.1L12 10.2L13 16L8 13.2L3 16L4 10.2L0 6.1L5.8 5.2L8 0Z" fill="#6B46C1" opacity="0.5" />
+        </svg>
+        {{ $t('pricing.guarantee') }}
       </p>
     </div>
   </div>
@@ -76,94 +81,101 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .pricing-card {
-  background-color: $light;
-  border-radius: $border-radius-lg;
+  background-color: white;
+  border-radius: 15px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
   position: relative;
-  transition: transform $transition-normal, box-shadow $transition-normal;
-  box-shadow: $shadow-sm;
-  border: 1px solid $gray;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #edf2f7;
+  margin: 0px auto;
+  width: 100%;
+  max-width: 100%;
   
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: $shadow-lg;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
   
   &.is-popular {
     border: 2px solid $primary;
-    box-shadow: $shadow-md;
+    box-shadow: 0 8px 30px rgba($primary, 0.2);
     z-index: 2;
+    transform: scale(1.02);
   }
   
   .popular-badge {
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: 0;
+    right: 20px;
     background-color: $primary;
     color: white;
-    padding: $spacing-xs $spacing-md;
-    border-radius: $border-radius-full;
-    font-weight: 500;
-    font-size: $font-size-xs;
+    padding: 8px 16px;
+    border-radius: 0 0 8px 8px;
+    font-weight: 600;
+    font-size: 14px;
+    z-index: 1;
   }
   
   .card-header {
-    padding: $spacing-xl;
+    padding: 30px 20px 15px;
     text-align: center;
     
     h3 {
-      font-size: $font-size-xl;
-      font-weight: 600;
-      margin-bottom: $spacing-xs;
-      color: $text;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #2d3748;
     }
     
     .card-description {
-      color: $dark-gray;
-      font-size: $font-size-base;
+      color: #718096;
+      font-size: 16px;
+      font-weight: 500;
     }
   }
   
   .price-container {
-    padding: $spacing-md $spacing-xl;
+    padding: 15px 20px 20px;
     text-align: center;
-    background-color: rgba($light-gray, 0.7);
+    background-color: white;
+    border-bottom: 1px solid #edf2f7;
     
     .price {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
       gap: 2px;
       
       .currency {
-        font-size: $font-size-xl;
-        font-weight: 600;
-        color: $text;
-        align-self: flex-start;
-        margin-top: 6px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #4a5568;
+        line-height: 1;
       }
       
       .amount {
-        font-size: 42px;
-        font-weight: 700;
+        font-size: 48px;
+        font-weight: 800;
         color: $primary;
         line-height: 1;
       }
       
       .period {
-        color: $dark-gray;
-        font-size: $font-size-base;
+        color: #718096;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 5px;
         align-self: flex-end;
-        margin-bottom: 8px;
       }
     }
   }
   
   .feature-list {
-    padding: $spacing-xl;
+    padding: 25px 20px;
     flex: 1;
     
     ul {
@@ -173,64 +185,77 @@ export default defineComponent({
       
       li {
         display: flex;
-        align-items: center;
-        margin-bottom: $spacing-md;
+        align-items: flex-start;
+        margin-bottom: 16px;
+        color: #4a5568;
+        font-size: 15px;
+        line-height: 1.5;
         
-        .feature-icon {
-          color: $secondary;
-          margin-right: $spacing-sm;
-          display: flex;
-          align-items: center;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        
+        .check-circle {
+          margin-right: 10px;
+          flex-shrink: 0;
+          margin-top: 1px;
         }
       }
     }
   }
   
   .card-footer {
-    padding: $spacing-xl;
+    padding: 20px;
     text-align: center;
+    margin-top: auto;
     
     .select-button {
       width: 100%;
-      padding: $spacing-md $spacing-xl;
-      border-radius: $border-radius-md;
-      font-weight: 500;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
       cursor: pointer;
-      transition: all $transition-normal;
+      transition: all 0.3s ease;
       border: none;
-      font-family: 'Poppins', sans-serif;
-      font-size: $font-size-base;
+      font-family: inherit;
+      font-size: 16px;
+      background-color: $primary;
+      color: white;
+      
+      &:hover {
+        background-color: darken($primary, 8%);
+        box-shadow: 0 4px 12px rgba($primary, 0.4);
+      }
       
       &.primary {
         background-color: $primary;
         color: white;
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba($primary, 0.4);
         
+        &:hover {
+          background-color: darken($primary, 8%);
+          box-shadow: 0 4px 20px rgba($primary, 0.5);
+          transform: scale(1.08);
+        }
+      }
+      
+      &.secondary {
         &:hover {
           background-color: darken($primary, 8%);
           box-shadow: 0 4px 12px rgba($primary, 0.4);
         }
       }
-      
-      &.secondary {
-        background-color: white;
-        color: $text;
-        border: 1px solid $gray;
-        
-        &:hover {
-          background-color: $light-gray;
-          border-color: $primary;
-        }
-      }
     }
     
     .guarantee {
-      margin-top: $spacing-md;
-      font-size: $font-size-xs;
-      color: $dark-gray;
+      margin-top: 12px;
+      font-size: 14px;
+      color: #718096;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: $spacing-xs;
+      gap: 6px;
     }
   }
 }
