@@ -1,27 +1,27 @@
 <template>
     <section id="testimonials" class="testimonials section">
-      <div class="geometric-circle"></div>
-      <div class="geometric-square"></div>
-      <div class="container">
-        <h2 class="section-title">{{ $t('testimonials.title') }}</h2>
-        <div class="testimonials-slider">
-          <transition name="fade" mode="out-in">
-            <TestimonialCard 
-              :key="currentTestimonial" 
-              :testimonial="testimonials[currentTestimonial]" 
-            />
-          </transition>
-          <div class="slider-controls">
-            <div 
-              v-for="(_, index) in testimonials.length" 
-              :key="index" 
-              class="slider-dot" 
-              :class="{ active: currentTestimonial === index }"
-              @click="currentTestimonial = index"
-            ></div>
+      <GradientBackground>
+        <div class="container">
+          <h2 class="section-title">{{ $t('testimonials.title') }}</h2>
+          <div class="testimonials-slider">
+            <transition name="fade" mode="out-in">
+              <TestimonialCard 
+                :key="currentTestimonial" 
+                :testimonial="testimonials[currentTestimonial]" 
+              />
+            </transition>
+            <div class="slider-controls">
+              <div 
+                v-for="(_, index) in testimonials.length" 
+                :key="index" 
+                class="slider-dot" 
+                :class="{ active: currentTestimonial === index }"
+                @click="currentTestimonial = index"
+              ></div>
+            </div>
           </div>
         </div>
-      </div>
+      </GradientBackground>
     </section>
 </template>
   
@@ -29,12 +29,14 @@
 import { defineComponent, ref, onMounted, onBeforeUnmount, computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import TestimonialCard from '@/components/ui/TestimonialCard.vue';
+import GradientBackground from '@/components/common/GradientBackground.vue';
 import type { Testimonial } from '@/types';
 
 export default defineComponent({
   name: 'TestimonialsSection',
   components: {
-    TestimonialCard
+    TestimonialCard,
+    GradientBackground
   },
   setup() {
     const { t, locale } = useI18n();
@@ -109,20 +111,9 @@ export default defineComponent({
   text-align: center;
   color: $light;
   
-  @include dark-gradient-background(
-    135deg, 
-    $primary, 
-    $tertiary, 
-    $accent,
-    $light,
-    $secondary,
-    true, 
-    0.12
-  );
-  
   .container {
     position: relative;
-    z-index: 2;
+    padding: $spacing-3xl 0;
   }
   
   .section-title {

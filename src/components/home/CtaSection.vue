@@ -1,28 +1,36 @@
 <template>
   <section class="cta-section">
-    <div class="geometric-circle"></div>
-    <div class="geometric-square"></div>
-    <div class="container">
-      <h2>{{ texts.title }}</h2>
-      <p>{{ texts.subtitle }}</p>
-      <CtaButton 
-        :text="texts.button" 
-        variant="primary" 
-        @click="scrollToContact"
-      />
-    </div>
+    <GradientBackground>
+      <div class="container">
+        <h2>{{ texts.title }}</h2>
+        <p>{{ texts.subtitle }}</p>
+        <div class="cta-actions">
+          <CtaButton 
+            :text="texts.button" 
+            variant="primary" 
+            @click="scrollToContact"
+          />
+          <div class="cta-phone">
+            <span class="or-call">{{ texts.orCall }}</span>
+            <a :href="`tel:${texts.phone}`" class="phone-link">{{ texts.phone }}</a>
+          </div>
+        </div>
+      </div>
+    </GradientBackground>
   </section>
 </template>
 
 <script lang="ts">
 import { defineComponent, computed } from 'vue';
 import CtaButton from '@/components/common/CtaButton.vue';
+import GradientBackground from '@/components/common/GradientBackground.vue';
 import { useI18n } from 'vue-i18n';
 
 export default defineComponent({
   name: 'CtaSection',
   components: {
-    CtaButton
+    CtaButton,
+    GradientBackground
   },
   setup() {
     const { t, locale } = useI18n();
@@ -31,7 +39,9 @@ export default defineComponent({
     const texts = computed(() => ({
       title: t('cta.title'),
       subtitle: t('cta.subtitle'),
-      button: t('cta.button')
+      button: t('cta.button'),
+      orCall: t('cta.orCall'),
+      phone: t('cta.phone')
     }));
     
     const scrollToContact = () => {
@@ -56,24 +66,12 @@ export default defineComponent({
 
 .cta-section {
   position: relative;
-  padding: $spacing-3xl 0;
   color: $light;
   text-align: center;
   
-  @include dark-gradient-background(
-    45deg, 
-    $primary, 
-    $tertiary, 
-    $accent,
-    $light,
-    $secondary,
-    true, 
-    0.18
-  );
-  
   .container {
     position: relative;
-    z-index: 2;
+    padding: $spacing-3xl 0;
   }
   
   h2 {
@@ -92,6 +90,37 @@ export default defineComponent({
     margin: 0 auto $spacing-xl;
     font-size: $font-size-lg;
     opacity: 0.9;
+  }
+  
+  .cta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-lg;
+  }
+  
+  .cta-phone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-xs;
+    
+    .or-call {
+      opacity: 0.8;
+      font-size: $font-size-sm;
+    }
+    
+    .phone-link {
+      color: $accent;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color $transition-normal;
+      
+      &:hover {
+        color: lighten($accent, 10%);
+        text-decoration: underline;
+      }
+    }
   }
 }
 </style>

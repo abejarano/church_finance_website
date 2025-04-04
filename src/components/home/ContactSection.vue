@@ -71,7 +71,31 @@
   
   <style lang="scss" scoped>
   .contact {
+    position: relative;
     background-color: $background;
+    color: $text;
+    
+    .container {
+      position: relative;
+      padding: $spacing-3xl 0;
+    }
+    
+    .section-title {
+      color: $text;
+      text-align: center;
+      position: relative;
+      margin-bottom: $spacing-2xl;
+      
+      &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: $primary;
+        margin: $spacing-md auto 0;
+        border-radius: $border-radius-full;
+      }
+    }
     
     &-container {
       display: grid;
@@ -81,10 +105,13 @@
     
     &-info {
       padding: $spacing-lg;
+      background-color: $light-gray;
+      border-radius: $border-radius-lg;
       
       h3 {
         font-size: $font-size-xl;
         margin-bottom: $spacing-lg;
+        color: $text;
       }
       
       p {
@@ -109,14 +136,14 @@
         width: 20px;
       }
       
-      a {
+      a, span {
         color: $text;
         text-decoration: none;
         transition: color $transition-normal;
-        
-        &:hover {
-          color: $primary;
-        }
+      }
+      
+      a:hover {
+        color: $primary;
       }
     }
     

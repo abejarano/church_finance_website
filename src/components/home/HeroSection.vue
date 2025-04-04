@@ -1,110 +1,111 @@
 <template>
   <section class="hero">
-    <div class="geometric-circle"></div>
-    <div class="geometric-square"></div>
-    <div class="container hero-container">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span>{{ texts.badge }}</span>
+    <GradientBackground>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>{{ texts.badge }}</span>
+          </div>
+          <h1>{{ texts.title }}</h1>
+          <p>{{ texts.subtitle }}</p>
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-value">+500</span>
+              <span class="stat-label">{{ texts.churches }}</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-value">98%</span>
+              <span class="stat-label">{{ texts.satisfaction }}</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-value">24/7</span>
+              <span class="stat-label">{{ texts.support }}</span>
+            </div>
+          </div>
+          <div class="hero-cta">
+            <CtaButton 
+              :text="texts.ctaButton" 
+              variant="tertiary" 
+              @click="handleDemoRequest"
+            />
+            <CtaButton 
+              :text="texts.knowMoreButton" 
+              variant="secondary" 
+              @click="scrollToFeatures"
+            />
+          </div>
+          <div class="hero-trust">
+            <span>{{ texts.trusted }}</span>
+            <div class="trust-logos">
+              <div class="trust-logo"><font-awesome-icon :icon="['fas', 'church']" /></div>
+              <div class="trust-logo"><font-awesome-icon :icon="['fas', 'cross']" /></div>
+              <div class="trust-logo"><font-awesome-icon :icon="['fas', 'hands-praying']" /></div>
+            </div>
+          </div>
         </div>
-        <h1>{{ texts.title }}</h1>
-        <p>{{ texts.subtitle }}</p>
-        <div class="hero-stats">
-          <div class="stat-item">
-            <span class="stat-value">+500</span>
-            <span class="stat-label">{{ texts.churches }}</span>
+        <div class="hero-image">
+          <div class="dashboard-mockup">
+            <div class="mockup-header">
+              <div class="mockup-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="mockup-content">
+              <div class="mockup-chart">
+                <div class="chart-bars">
+                  <div class="chart-bar" style="height: 60%;"></div>
+                  <div class="chart-bar" style="height: 80%;"></div>
+                  <div class="chart-bar" style="height: 55%;"></div>
+                  <div class="chart-bar" style="height: 90%;"></div>
+                  <div class="chart-bar" style="height: 70%;"></div>
+                  <div class="chart-bar" style="height: 85%;"></div>
+                </div>
+              </div>
+              <div class="mockup-metrics">
+                <div class="metric">
+                  <div class="metric-icon">
+                    <font-awesome-icon :icon="['fas', 'chart-line']" />
+                  </div>
+                  <div class="metric-info">
+                    <div class="metric-label">{{ texts.income }}</div>
+                    <div class="metric-value">R$ 15.235,00</div>
+                  </div>
+                  <div class="metric-trend up">
+                    <font-awesome-icon :icon="['fas', 'arrow-up']" />
+                    <span>12%</span>
+                  </div>
+                </div>
+                <div class="metric">
+                  <div class="metric-icon">
+                    <font-awesome-icon :icon="['fas', 'hand-holding-dollar']" />
+                  </div>
+                  <div class="metric-info">
+                    <div class="metric-label">{{ texts.donations }}</div>
+                    <div class="metric-value">+125</div>
+                  </div>
+                  <div class="metric-trend up">
+                    <font-awesome-icon :icon="['fas', 'arrow-up']" />
+                    <span>8%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-value">98%</span>
-            <span class="stat-label">{{ texts.satisfaction }}</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat-item">
-            <span class="stat-value">24/7</span>
-            <span class="stat-label">{{ texts.support }}</span>
-          </div>
-        </div>
-        <div class="hero-cta">
-          <CtaButton 
-            :text="texts.ctaButton" 
-            variant="tertiary" 
-            @click="handleDemoRequest"
-          />
-          <CtaButton 
-            :text="texts.knowMoreButton" 
-            variant="secondary" 
-            @click="scrollToFeatures"
-          />
-        </div>
-        <div class="hero-trust">
-          <span>{{ texts.trusted }}</span>
-          <div class="trust-logos">
-            <div class="trust-logo"><font-awesome-icon :icon="['fas', 'church']" /></div>
-            <div class="trust-logo"><font-awesome-icon :icon="['fas', 'cross']" /></div>
-            <div class="trust-logo"><font-awesome-icon :icon="['fas', 'hands-praying']" /></div>
-          </div>
+          <div class="hero-shape"></div>
         </div>
       </div>
-      <div class="hero-image">
-        <div class="dashboard-mockup">
-          <div class="mockup-header">
-            <div class="mockup-dots">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-          <div class="mockup-content">
-            <div class="mockup-chart">
-              <div class="chart-bars">
-                <div class="chart-bar" style="height: 60%;"></div>
-                <div class="chart-bar" style="height: 80%;"></div>
-                <div class="chart-bar" style="height: 55%;"></div>
-                <div class="chart-bar" style="height: 90%;"></div>
-                <div class="chart-bar" style="height: 70%;"></div>
-                <div class="chart-bar" style="height: 85%;"></div>
-              </div>
-            </div>
-            <div class="mockup-metrics">
-              <div class="metric">
-                <div class="metric-icon">
-                  <font-awesome-icon :icon="['fas', 'chart-line']" />
-                </div>
-                <div class="metric-info">
-                  <div class="metric-label">{{ texts.income }}</div>
-                  <div class="metric-value">R$ 15.235,00</div>
-                </div>
-                <div class="metric-trend up">
-                  <font-awesome-icon :icon="['fas', 'arrow-up']" />
-                  <span>12%</span>
-                </div>
-              </div>
-              <div class="metric">
-                <div class="metric-icon">
-                  <font-awesome-icon :icon="['fas', 'hand-holding-dollar']" />
-                </div>
-                <div class="metric-info">
-                  <div class="metric-label">{{ texts.donations }}</div>
-                  <div class="metric-value">+125</div>
-                </div>
-                <div class="metric-trend up">
-                  <font-awesome-icon :icon="['fas', 'arrow-up']" />
-                  <span>8%</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="hero-shape"></div>
-      </div>
-    </div>
+    </GradientBackground>
   </section>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import CtaButton from '@/components/common/CtaButton.vue';
+import GradientBackground from '@/components/common/GradientBackground.vue';
 import { computed } from 'vue';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { 
@@ -160,29 +161,14 @@ const scrollToFeatures = () => {
 .hero {
   position: relative;
   color: white;
-  padding: 150px 0 100px;
-  
-  @include dark-gradient-background(
-    150deg, 
-    $primary, 
-    $tertiary, 
-    $accent,
-    $light,
-    $secondary,
-    true, 
-    0.15
-  );
-  
-  .geometric-circle, .geometric-square {
-    // Estos elementos los agrega el mixin cuando $with-shapes es true
-  }
+  margin-top: 80px;
   
   &-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: $spacing-2xl;
     position: relative;
-    z-index: 2; // Aumentamos el z-index para que esté por encima de las formas
+    padding: 100px 0 100px;
     
     @media (max-width: $breakpoint-lg) {
       grid-template-columns: 1fr;

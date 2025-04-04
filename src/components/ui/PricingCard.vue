@@ -24,18 +24,19 @@
             <font-awesome-icon :icon="['fas', 'check-circle']" />
           </div>
           <span v-if="typeof feature === 'string'">{{ feature }}</span>
-          <span v-else>{{ feature.static || feature }}</span>
+          <span v-else>{{ feature }}</span>
         </li>
       </ul>
     </div>
     
     <div class="card-footer">
-      <CtaButton 
-        :text="plan.buttonText || $t('pricing.defaultButton')" 
-        :variant="plan.popular ? 'primary' : 'secondary'" 
-        class="full-width"
+      <button 
+        class="select-button"
+        :class="{ 'primary': plan.popular, 'secondary': !plan.popular }"
         @click="$emit('select-plan', plan.id)"
-      />
+      >
+        {{ plan.buttonText || $t('pricing.defaultButton') }}
+      </button>
       <p class="guarantee" v-if="plan.popular">
         <font-awesome-icon :icon="['fas', 'shield-alt']" />
         {{ $t('pricing.guarantee') || '7 dias de garantia' }}
@@ -45,10 +46,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
+import { defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { PricingPlan } from '@/types';
-import CtaButton from '@/components/common/CtaButton.vue';
+import type { PricingPlan } from '@/types';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCheckCircle, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
@@ -59,7 +59,6 @@ library.add(faCheckCircle, faShieldAlt);
 export default defineComponent({
   name: 'PricingCard',
   components: {
-    CtaButton,
     FontAwesomeIcon
   },
   setup() {
@@ -68,7 +67,7 @@ export default defineComponent({
   },
   props: {
     plan: {
-      type: Object as PropType<PricingPlan>,
+      type: Object as any,
       required: true
     }
   },
@@ -192,8 +191,37 @@ export default defineComponent({
     padding: $spacing-xl;
     text-align: center;
     
-    .full-width {
+    .select-button {
       width: 100%;
+      padding: $spacing-md $spacing-xl;
+      border-radius: $border-radius-md;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all $transition-normal;
+      border: none;
+      font-family: 'Poppins', sans-serif;
+      font-size: $font-size-base;
+      
+      &.primary {
+        background-color: $primary;
+        color: white;
+        
+        &:hover {
+          background-color: darken($primary, 8%);
+          box-shadow: 0 4px 12px rgba($primary, 0.4);
+        }
+      }
+      
+      &.secondary {
+        background-color: white;
+        color: $text;
+        border: 1px solid $gray;
+        
+        &:hover {
+          background-color: $light-gray;
+          border-color: $primary;
+        }
+      }
     }
     
     .guarantee {
