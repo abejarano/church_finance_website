@@ -2,7 +2,14 @@
   "hero": {
     "title": "Simplified Financial Management for Churches",
     "subtitle": "Simplify your church's financial administration with our intuitive tool. Control, transparency, and efficiency for your congregation.",
-    "ctaButton": "Get Started Now"
+    "ctaButton": "Get Started Now",
+    "badge": "Financial management software #1",
+    "trusted": "Trusted by churches of all sizes",
+    "churches": "Churches",
+    "satisfaction": "Satisfaction",
+    "support": "Support",
+    "income": "Income",
+    "donations": "Donations"
   },
   "navbar": {
     "features": "Features",
@@ -80,6 +87,27 @@
       "church": "Renewed Christian Church"
     }
   },
+  "trust": {
+    "title": "Trust and financial security",
+    "subtitle": "Your financial information is protected with the highest security standards",
+    "security": {
+      "title": "Bank-level security",
+      "description": "We use bank-level encryption to protect all your financial information."
+    },
+    "privacy": {
+      "title": "Guaranteed privacy",
+      "description": "Your data is never shared with third parties and we comply with all data protection regulations."
+    },
+    "backup": {
+      "title": "Automatic backup",
+      "description": "We back up your data automatically to ensure that important information is never lost."
+    },
+    "quote": "Your church's financial management deserves the same security and professionalism as any financial institution. That is our commitment to you.",
+    "author": {
+      "name": "Carlos Mendes",
+      "position": "CEO, Gloria Finance"
+    }
+  },
   "pricing": {
     "title": "Plans and Pricing",
     "subtitle": "Choose the ideal plan for your church",
@@ -133,19 +161,30 @@
     "phone": "+1 555-123-4567",
     "email": "contact (at) churchfinance.com",
     "whatsapp": "WhatsApp Support",
+    "successMessage": "Your message has been sent successfully. We will contact you soon.",
     "form": {
+      "title": "Contact us today",
+      "subtitle": "Fill out the form and we'll get in touch with you",
       "name": "Name",
       "email": "Email",
       "phone": "Phone",
       "church": "Church Name",
       "message": "Message",
-      "button": "Send Message"
+      "button": "Send Message",
+      "privacy": "Your data is protected by our privacy policy",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "Your email",
+      "phonePlaceholder": "Your phone",
+      "churchPlaceholder": "Your church name",
+      "messagePlaceholder": "How can we help you?"
     }
   },
   "cta": {
     "title": "Ready to simplify your finances?",
     "subtitle": "Start today with a free trial period",
-    "button": "Get Started Now"
+    "button": "Get Started Now",
+    "orCall": "or call us at",
+    "phone": "+1 555-123-4567"
   },
   "footer": {
     "description": "Gloria Finance is a specialized software for church financial management that optimizes administrative and financial processes.",
@@ -160,5 +199,60 @@
     "phone": "+55 11 96599-0791",
     "email": "gloriafinance (at) jaspesoft.com",
     "copyright": "© {year} Jaspesoft CNPJ 43.716.343/0001-60. All rights reserved."
+  },
+  "dashboard": {
+    "preTitle": "Advanced Financial Analysis",
+    "title": "A clear view of your finances",
+    "description": "Visualize all your church's financial data through intuitive dashboards that allow you to make informed decisions in real time.",
+    "ctaButton": "Get a Demo",
+    "feature1": {
+      "title": "Custom Reports",
+      "description": "Create reports tailored to your specific needs."
+    },
+    "feature2": {
+      "title": "Trend Analysis",
+      "description": "Identify patterns and trends in your donations and expenses."
+    },
+    "feature3": {
+      "title": "Financial Alerts",
+      "description": "Receive automatic notifications about important events."
+    },
+    "card1": {
+      "title": "Offerings"
+    },
+    "card2": {
+      "title": "Active Members"
+    },
+    "card3": {
+      "title": "Expenses"
+    },
+    "chart1": {
+      "title": "Income vs Expenses",
+      "income": "Income",
+      "expenses": "Expenses"
+    },
+    "chart2": {
+      "title": "Expense Distribution",
+      "item1": "Ministries",
+      "item2": "Infrastructure",
+      "item3": "Operations",
+      "item4": "Others"
+    },
+    "recent": {
+      "title": "Recent Transactions",
+      "viewAll": "View all",
+      "item1": {
+        "title": "Sunday Tithe",
+        "date": "June 12, 2023"
+      },
+      "item2": {
+        "title": "Utilities",
+        "date": "June 10, 2023"
+      },
+      "item3": {
+        "title": "Special Offering",
+        "date": "June 8, 2023"
+      }
+    }
   }
 } 

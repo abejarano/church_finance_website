@@ -18,7 +18,9 @@
             <LanguageSelector />
           </li>
           <li>
-            <CtaButton :text="loginText" size="small" />
+            <a href="https://gloriafinance.jaspesoft.com/" target="_blank" rel="noopener noreferrer" class="login-link">
+              <CtaButton :text="loginText" size="small" />
+            </a>
           </li>
         </ul>
       </div>
@@ -115,6 +117,15 @@
           
           &:hover {
             color: $primary;
+          }
+          
+          &.login-link {
+            text-decoration: none;
+            display: inline-block;
+            
+            &:hover {
+              color: inherit;
+            }
           }
         }
       }

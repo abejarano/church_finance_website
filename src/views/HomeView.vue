@@ -5,6 +5,7 @@
       <BenefitsSection />
       <TestimonialsSection />
       <PricingSection />
+      <TrustSection />
       <CtaSection />
       <ContactSection />
     </div>
@@ -17,6 +18,7 @@
   import BenefitsSection from '@/components/home/BenefitsSection.vue';
   import TestimonialsSection from '@/components/home/TestimonialsSection.vue';
   import PricingSection from '@/components/home/PricingSection.vue';
+  import TrustSection from '@/components/home/TrustSection.vue';
   import CtaSection from '@/components/home/CtaSection.vue';
   import ContactSection from '@/components/home/ContactSection.vue';
   
@@ -28,6 +30,7 @@
       BenefitsSection,
       TestimonialsSection,
       PricingSection,
+      TrustSection,
       CtaSection,
       ContactSection
     }

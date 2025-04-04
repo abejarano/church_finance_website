@@ -2,7 +2,14 @@
   "hero": {
     "title": "Gestión Financiera Simplificada para Iglesias",
     "subtitle": "Simplifica la administración financiera de tu iglesia con nuestra herramienta intuitiva. Control, transparencia y eficiencia para tu congregación.",
-    "ctaButton": "Comenzar Ahora"
+    "ctaButton": "Comenzar Ahora",
+    "badge": "Software de gestión financiera #1",
+    "trusted": "Confiado por iglesias de todos los tamaños",
+    "churches": "Iglesias",
+    "satisfaction": "Satisfacción",
+    "support": "Soporte",
+    "income": "Ingresos",
+    "donations": "Donaciones"
   },
   "navbar": {
     "features": "Características",
@@ -80,6 +87,27 @@
       "church": "Iglesia Cristiana Renovada"
     }
   },
+  "trust": {
+    "title": "Confianza y seguridad financiera",
+    "subtitle": "Su información financiera está protegida con los más altos estándares de seguridad",
+    "security": {
+      "title": "Seguridad bancaria",
+      "description": "Utilizamos encriptación de nivel bancario para proteger toda su información financiera."
+    },
+    "privacy": {
+      "title": "Privacidad garantizada",
+      "description": "Sus datos nunca son compartidos con terceros y cumplimos con todas las regulaciones de protección de datos."
+    },
+    "backup": {
+      "title": "Respaldo automático",
+      "description": "Respaldamos sus datos automáticamente para garantizar que nunca se pierda información importante."
+    },
+    "quote": "La gestión financiera de su iglesia merece la misma seguridad y profesionalismo que cualquier institución financiera. Ese es nuestro compromiso con usted.",
+    "author": {
+      "name": "Carlos Mendes",
+      "position": "CEO, Gloria Finance"
+    }
+  },
   "pricing": {
     "title": "Planos e Preços",
     "subtitle": "Escolha o plano ideal para sua igreja",
@@ -133,19 +161,30 @@
     "phone": "+34 91 999 9999",
     "email": "contacto (at) finanzasiglesias.com",
     "whatsapp": "Ayuda por WhatsApp",
+    "successMessage": "Se ha enviado su mensaje correctamente. Nos pondremos en contacto pronto.",
     "form": {
+      "title": "Contáctenos hoy",
+      "subtitle": "Complete el formulario y nos pondremos en contacto con usted",
       "name": "Nombre",
       "email": "Email",
       "phone": "Teléfono",
       "church": "Nombre de la Iglesia",
       "message": "Mensaje",
-      "button": "Enviar Mensaje"
+      "button": "Enviar Mensaje",
+      "privacy": "Sus datos están protegidos por nuestra política de privacidad",
+      "namePlaceholder": "Su nombre",
+      "emailPlaceholder": "Su correo electrónico",
+      "phonePlaceholder": "Su teléfono",
+      "churchPlaceholder": "Nombre de su iglesia",
+      "messagePlaceholder": "¿Cómo podemos ayudarle?"
     }
   },
   "cta": {
     "title": "¿Listo para simplificar tus finanzas?",
     "subtitle": "Comienza hoy mismo con un periodo de prueba gratuito",
-    "button": "Comenzar Ahora"
+    "button": "Empezar Ahora",
+    "orCall": "o llama al",
+    "phone": "+34 91 999 9999"
   },
   "footer": {
     "description": "Gloria Finance es un software especializado en la administración financiera para iglesias, que optimiza procesos administrativos y financieros.",
@@ -160,5 +199,60 @@
     "phone": "+55 11 96599-0791",
     "email": "gloriafinance (at) jaspesoft.com",
     "copyright": "© {year} Jaspesoft CNPJ 43.716.343/0001-60. Todos los derechos reservados."
+  },
+  "dashboard": {
+    "preTitle": "Análisis financiero avanzado",
+    "title": "Una visión clara de sus finanzas",
+    "description": "Visualice todos los datos financieros de su iglesia a través de dashboards intuitivos que le permiten tomar decisiones informadas en tiempo real.",
+    "ctaButton": "Obtener demostración",
+    "feature1": {
+      "title": "Reportes personalizados",
+      "description": "Cree informes adaptados a sus necesidades específicas."
+    },
+    "feature2": {
+      "title": "Análisis de tendencias",
+      "description": "Identifique patrones y tendencias en sus donaciones y gastos."
+    },
+    "feature3": {
+      "title": "Alertas financieras",
+      "description": "Reciba notificaciones automáticas sobre eventos importantes."
+    },
+    "card1": {
+      "title": "Ofrendas"
+    },
+    "card2": {
+      "title": "Miembros activos"
+    },
+    "card3": {
+      "title": "Gastos"
+    },
+    "chart1": {
+      "title": "Ingresos vs Gastos",
+      "income": "Ingresos",
+      "expenses": "Gastos"
+    },
+    "chart2": {
+      "title": "Distribución de Gastos",
+      "item1": "Ministerios",
+      "item2": "Infraestructura",
+      "item3": "Operaciones",
+      "item4": "Otros"
+    },
+    "recent": {
+      "title": "Transacciones Recientes",
+      "viewAll": "Ver todas",
+      "item1": {
+        "title": "Diezmo dominical",
+        "date": "12 Junio, 2023"
+      },
+      "item2": {
+        "title": "Servicios públicos",
+        "date": "10 Junio, 2023"
+      },
+      "item3": {
+        "title": "Ofrenda especial",
+        "date": "8 Junio, 2023"
+      }
+    }
   }
 } 

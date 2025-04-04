@@ -33,8 +33,8 @@
   
   <script setup lang="ts">
   import { useI18n } from 'vue-i18n';
+  import type { ContactFormData } from '@/types';
   import ContactForm from '@/components/ui/ContactForm.vue';
-  import { ContactFormData } from '@/types';
   import { library } from '@fortawesome/fontawesome-svg-core';
   import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
   import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
@@ -60,7 +60,7 @@
   const handleFormSubmit = (formData: ContactFormData) => {
     console.log('Form submitted:', formData);
     // Aquí podría ir la lógica para enviar los datos del formulario al servidor
-    alert(t('Se ha enviado su mensaje correctamente. Nos pondremos en contacto pronto.'));
+    alert(t('contact.successMessage'));
   };
   
   // Función para convertir el formato escapado "contacto (at) ejemplo.com" a "contacto@ejemplo.com"

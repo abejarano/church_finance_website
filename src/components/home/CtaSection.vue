@@ -1,5 +1,7 @@
 <template>
   <section class="cta-section">
+    <div class="geometric-circle"></div>
+    <div class="geometric-square"></div>
     <div class="container">
       <h2>{{ texts.title }}</h2>
       <p>{{ texts.subtitle }}</p>
@@ -49,16 +51,36 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @use "sass:color";
+@use "@/assets/scss/variables" as *;
+@use "@/assets/scss/functions" as *;
 
 .cta-section {
+  position: relative;
   padding: $spacing-3xl 0;
-  background: linear-gradient(135deg, $primary 30%, darken($primary, 15%) 100%);
-  color: white;
+  color: $light;
   text-align: center;
+  
+  @include dark-gradient-background(
+    45deg, 
+    $primary, 
+    $tertiary, 
+    $accent,
+    $light,
+    $secondary,
+    true, 
+    0.18
+  );
+  
+  .container {
+    position: relative;
+    z-index: 2;
+  }
   
   h2 {
     font-size: $font-size-3xl;
     margin-bottom: $spacing-lg;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
     
     @media (max-width: $breakpoint-md) {
       font-size: $font-size-2xl;

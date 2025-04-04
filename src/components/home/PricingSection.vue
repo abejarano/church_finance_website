@@ -20,7 +20,7 @@
   import { defineComponent, computed } from 'vue';
   import { useI18n } from 'vue-i18n';
   import PricingCard from '@/components/ui/PricingCard.vue';
-  import { PricingPlan } from '@/types';
+  import type { PricingPlan } from '@/types';
   
   export default defineComponent({
     name: 'PricingSection',
@@ -167,13 +167,90 @@
   
   <style lang="scss" scoped>
   .pricing {
-    background-color: $light;
+    background-color: $light-gray;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba($text, 0.02) 0%, rgba($gray, 0.05) 100%);
+      z-index: 0;
+    }
+    
+    .container {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .section-title {
+      color: $text;
+      position: relative;
+      
+      &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(to right, $tertiary, $accent);
+        margin: $spacing-md auto 0;
+        border-radius: $border-radius-full;
+      }
+    }
+    
+    .section-subtitle {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto $spacing-xl;
+      color: $dark-gray;
+      font-size: $font-size-lg;
+    }
     
     &-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: $spacing-xl;
       margin-top: $spacing-2xl;
+      position: relative;
+    }
+    
+    &-shape-1 {
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 200px;
+      height: 200px;
+      background-color: rgba($tertiary, 0.08);
+      border-radius: 30% 70% 50% 50% / 40% 50% 50% 60%;
+      z-index: 1;
+    }
+    
+    &-shape-2 {
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
+      width: 250px;
+      height: 250px;
+      background-color: rgba($secondary, 0.08);
+      border-radius: 60% 40% 50% 50% / 50% 50% 50% 50%;
+      z-index: 1;
+    }
+    
+    &-pattern {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 60%;
+      background: radial-gradient(circle, rgba($accent, 0.03) 1px, transparent 1px);
+      background-size: 30px 30px;
+      z-index: 1;
+      opacity: 0.6;
     }
   }
   </style>

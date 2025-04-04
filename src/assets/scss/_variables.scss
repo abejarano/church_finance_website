@@ -1,12 +1,19 @@
 // Colors
-$primary: #7528E9; // Violeta del logo
-$secondary: #90EE90; // Verde del logo
-$accent: #FFA500; // Naranja del logo
-$background: #f9f9f9;
-$text: #333;
+$primary: #502981; // Purple de la paleta
+$secondary: #02D474; // Green de la paleta
+$accent: #fab42e; // Mustard de la paleta
+$tertiary: #239CFF; // Blue de la paleta
+$black: #2d2d2d; // Black de la paleta
+$dark-blue: #2d2d2d; // Black de la paleta
+$background: #F7F9FC; // Fondo suave
+$text: #2d2d2d; // Black de la paleta para texto
 $light: #ffffff;
-$gray: #f2f2f2;
-$dark-gray: #777;
+$light-gray: #F1F5F9;
+$gray: #E2E8F0;
+$dark-gray: #64748B;
+$grey: rgba(131, 131, 131, 0.8); // Grey de la paleta
+$grey-middle: rgba(131, 131, 131, 0.2); // GreyMiddle de la paleta
+$grey-light: rgba(238, 236, 236, 0.4); // GreyLight de la paleta
 
 // Breakpoints
 $breakpoint-xs: 375px;
@@ -16,6 +23,8 @@ $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
 // Font sizes
+$font-size-xs: 0.875rem;
+$font-size-sm: 0.95rem;
 $font-size-base: 1rem;
 $font-size-lg: 1.25rem;
 $font-size-xl: 1.5rem;
@@ -33,9 +42,10 @@ $spacing-2xl: 3rem;
 $spacing-3xl: 4rem;
 
 // Border radius
-$border-radius-sm: 3px;
-$border-radius-md: 5px;
-$border-radius-lg: 10px;
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
 $border-radius-full: 9999px;
 
 // Transitions
@@ -44,6 +54,59 @@ $transition-normal: 0.3s;
 $transition-slow: 0.5s;
 
 // Shadows
-$shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
-$shadow-md: 0 5px 15px rgba(0, 0, 0, 0.05);
-$shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.07), 0 5px 10px rgba(0, 0, 0, 0.05);
+$shadow-elevation: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+// ===========================
+
+// Colors
+// $primary: #7528E9; // Violeta del logo
+// $secondary: #90EE90; // Verde del logo
+// $accent: #FFA500; // Naranja del logo
+// $background: #f9f9f9;
+// $text: #333;
+// $light: #ffffff;
+// $gray: #f2f2f2;
+// $dark-gray: #777;
+
+// // Breakpoints
+// $breakpoint-xs: 375px;
+// $breakpoint-sm: 576px;
+// $breakpoint-md: 768px;
+// $breakpoint-lg: 992px;
+// $breakpoint-xl: 1200px;
+
+// // Font sizes
+// $font-size-base: 1rem;
+// $font-size-lg: 1.25rem;
+// $font-size-xl: 1.5rem;
+// $font-size-2xl: 2rem;
+// $font-size-3xl: 2.5rem;
+// $font-size-4xl: 3rem;
+
+// // Spacing
+// $spacing-xs: 0.25rem;
+// $spacing-sm: 0.5rem;
+// $spacing-md: 1rem;
+// $spacing-lg: 1.5rem;
+// $spacing-xl: 2rem;
+// $spacing-2xl: 3rem;
+// $spacing-3xl: 4rem;
+
+// // Border radius
+// $border-radius-sm: 3px;
+// $border-radius-md: 5px;
+// $border-radius-lg: 10px;
+// $border-radius-full: 9999px;
+
+// // Transitions
+// $transition-fast: 0.2s;
+// $transition-normal: 0.3s;
+// $transition-slow: 0.5s;
+
+// // Shadows
+// $shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.05);
+// $shadow-md: 0 5px 15px rgba(0, 0, 0, 0.05);
+// $shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
