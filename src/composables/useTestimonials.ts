@@ -1,5 +1,5 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-import { Testimonial } from '@/types';
+import type { Testimonial } from '@/types';
 
 export function useTestimonials(autoSlideInterval = 5000) {
   const currentTestimonial = ref(0);

@@ -28,12 +28,12 @@
   </template>
   
   <script setup lang="ts">
-  import { ref, computed, watch } from 'vue';
+  import { ref, computed } from 'vue';
   import { useI18n } from 'vue-i18n';
   import CtaButton from './CtaButton.vue';
   import LanguageSelector from './LanguageSelector.vue';
   
-  const { t, locale } = useI18n();
+  const { t } = useI18n();
   const isMenuOpen = ref(false);
   
   // Usar computed para que los items del menú se actualicen cuando cambie el idioma

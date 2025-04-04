@@ -129,7 +129,7 @@ export default defineComponent({
   },
   emits: ['form-submitted'],
   setup(_, { emit }) {
-    const { t, locale } = useI18n();
+    const { t } = useI18n();
     const isSubmitting = ref(false);
     
     // Usar computed para que las etiquetas del formulario se actualicen cuando cambie el idioma

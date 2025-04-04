@@ -41,7 +41,7 @@
   import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
   import { computed } from 'vue';
   
-  const { t, locale } = useI18n();
+  const { t } = useI18n();
   
   // Add icons to library
   library.add(faMapMarkerAlt, faPhone, faEnvelope, faWhatsapp);

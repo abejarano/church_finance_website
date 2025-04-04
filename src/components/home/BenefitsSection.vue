@@ -61,7 +61,7 @@ export default defineComponent({
     FontAwesomeIcon
   },
   setup() {
-    const { t, locale } = useI18n();
+    const { t } = useI18n();
     
     // Usar computed para que los beneficios se actualicen cuando cambie el idioma
     const benefits = computed(() => [

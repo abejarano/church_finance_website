@@ -30,7 +30,6 @@ import { defineComponent, ref, onMounted, onBeforeUnmount, computed } from 'vue'
 import { useI18n } from 'vue-i18n';
 import TestimonialCard from '@/components/ui/TestimonialCard.vue';
 import GradientBackground from '@/components/common/GradientBackground.vue';
-import type { Testimonial } from '@/types';
 
 export default defineComponent({
   name: 'TestimonialsSection',
@@ -39,7 +38,7 @@ export default defineComponent({
     GradientBackground
   },
   setup() {
-    const { t, locale } = useI18n();
+    const { t } = useI18n();
     const currentTestimonial = ref(0);
     
     // Usar computed para que los testimonios se actualicen cuando cambie el idioma

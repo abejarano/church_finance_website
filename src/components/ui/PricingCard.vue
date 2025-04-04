@@ -48,7 +48,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { useI18n } from 'vue-i18n';
-import type { PricingPlan } from '@/types';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCheckCircle, faShieldAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';

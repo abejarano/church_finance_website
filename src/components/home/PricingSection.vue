@@ -20,7 +20,6 @@
   import { defineComponent, computed } from 'vue';
   import { useI18n } from 'vue-i18n';
   import PricingCard from '@/components/ui/PricingCard.vue';
-  import type { PricingPlan } from '@/types';
   
   export default defineComponent({
     name: 'PricingSection',

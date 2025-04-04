@@ -72,7 +72,7 @@
       FontAwesomeIcon
     },
     setup() {
-      const { t, locale } = useI18n();
+      const { t } = useI18n();
       const currentYear = computed(() => new Date().getFullYear());
       
       // Textos del footer que se actualizan con el idioma

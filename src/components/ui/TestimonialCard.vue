@@ -22,8 +22,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from 'vue';
-import { Testimonial } from '@/types';
+import { defineComponent } from 'vue';
+import type { PropType } from 'vue';
+import type { Testimonial } from '@/types';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faStar, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';

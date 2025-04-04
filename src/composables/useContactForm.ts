@@ -1,5 +1,5 @@
 import { reactive } from 'vue';
-import { ContactFormData } from '@/types';
+import type { ContactFormData } from '@/types';
 
 export function useContactForm() {
   const formData = reactive<ContactFormData>({
