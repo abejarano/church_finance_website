@@ -6,7 +6,7 @@
       
       <div class="benefits-content">
         <div class="benefits-image">
-          <img src="@/assets/img/logoHorizontal.png" alt="Dashboard Preview" class="preview-image" />
+          <img src="@/assets/img/dashboard.png" alt="Dashboard Preview" class="preview-image" />
           <div class="image-decoration"></div>
         </div>
         

@@ -54,44 +54,13 @@
                 <span></span>
               </div>
             </div>
-            <div class="mockup-content">
-              <div class="mockup-chart">
-                <div class="chart-bars">
-                  <div class="chart-bar" style="height: 60%;"></div>
-                  <div class="chart-bar" style="height: 80%;"></div>
-                  <div class="chart-bar" style="height: 55%;"></div>
-                  <div class="chart-bar" style="height: 90%;"></div>
-                  <div class="chart-bar" style="height: 70%;"></div>
-                  <div class="chart-bar" style="height: 85%;"></div>
-                </div>
-              </div>
-              <div class="mockup-metrics">
-                <div class="metric">
-                  <div class="metric-icon">
-                    <font-awesome-icon :icon="['fas', 'chart-line']" />
-                  </div>
-                  <div class="metric-info">
-                    <div class="metric-label">{{ texts.income }}</div>
-                    <div class="metric-value">R$ 15.235,00</div>
-                  </div>
-                  <div class="metric-trend up">
-                    <font-awesome-icon :icon="['fas', 'arrow-up']" />
-                    <span>12%</span>
-                  </div>
-                </div>
-                <div class="metric">
-                  <div class="metric-icon">
-                    <font-awesome-icon :icon="['fas', 'hand-holding-dollar']" />
-                  </div>
-                  <div class="metric-info">
-                    <div class="metric-label">{{ texts.donations }}</div>
-                    <div class="metric-value">+125</div>
-                  </div>
-                  <div class="metric-trend up">
-                    <font-awesome-icon :icon="['fas', 'arrow-up']" />
-                    <span>8%</span>
-                  </div>
-                </div>
+            <div class="dashboard-preview">
+              <div class="dashboard-frame">
+                <img src="@/assets/img/dashboard.png" alt="Dashboard Preview" class="dashboard-image" />
+                <div class="frame-decoration top-left"></div>
+                <div class="frame-decoration top-right"></div>
+                <div class="frame-decoration bottom-left"></div>
+                <div class="frame-decoration bottom-right"></div>
               </div>
             </div>
           </div>
@@ -103,27 +72,13 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import CtaButton from '@/components/common/CtaButton.vue';
 import GradientBackground from '@/components/common/GradientBackground.vue';
-import { computed } from 'vue';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { 
-  faChurch, 
-  faCross, 
-  faHandsPraying, 
-  faChartLine, 
-  faHandHoldingDollar, 
-  faArrowUp 
-} from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-// Add icons
-library.add(faChurch, faCross, faHandsPraying, faChartLine, faHandHoldingDollar, faArrowUp);
+const { t } = useI18n();
 
-const { t, locale } = useI18n();
-
-// Propiedad computada para los textos que dependen del idioma
 const texts = computed(() => ({
   badge: t('hero.badge'),
   title: t('hero.title'),
@@ -328,119 +283,133 @@ const scrollToFeatures = () => {
     z-index: -1;
   }
   
-  .dashboard-mockup {
-    width: 100%;
-    max-width: 540px;
-    background-color: white;
-    border-radius: $border-radius-lg;
-    overflow: hidden;
-    box-shadow: $shadow-elevation;
+  .dashboard-preview {
+    padding: $spacing-lg;
     
-    .mockup-header {
-      background-color: #f5f5f7;
-      padding: $spacing-xs $spacing-md;
-      display: flex;
-      align-items: center;
-      
-      .mockup-dots {
-        display: flex;
-        gap: 6px;
-        
-        span {
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          
-          &:nth-child(1) {
-            background-color: #ff5f57;
-          }
-          
-          &:nth-child(2) {
-            background-color: #febc2e;
-          }
-          
-          &:nth-child(3) {
-            background-color: #28c840;
-          }
-        }
-      }
-    }
-    
-    .mockup-content {
+    .dashboard-frame {
+      position: relative;
+      border-radius: $border-radius-lg;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
       padding: $spacing-lg;
+      box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+      overflow: hidden;
       
-      .mockup-chart {
-        padding: $spacing-md;
-        background-color: $light-gray;
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          45deg,
+          rgba($accent, 0.1),
+          rgba($accent, 0.05)
+        );
+        z-index: 0;
+      }
+      
+      .dashboard-image {
+        position: relative;
+        width: 100%;
+        height: auto;
         border-radius: $border-radius-md;
-        margin-bottom: $spacing-lg;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        transform: translateY(0);
+        transition: transform 0.3s ease;
+        z-index: 1;
         
-        .chart-bars {
-          height: 160px;
-          display: flex;
-          align-items: flex-end;
-          justify-content: space-between;
-          
-          .chart-bar {
-            width: 12%;
-            background: linear-gradient(to top, $primary, color.adjust($primary, $lightness: 15%));
-            border-radius: $border-radius-sm $border-radius-sm 0 0;
-          }
+        &:hover {
+          transform: translateY(-4px);
         }
       }
       
-      .mockup-metrics {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: $spacing-md;
+      .frame-decoration {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        z-index: 2;
         
-        .metric {
-          background-color: $light-gray;
-          border-radius: $border-radius-md;
-          padding: $spacing-md;
-          display: flex;
-          align-items: center;
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          background: $accent;
+        }
+        
+        &.top-left {
+          top: $spacing-md;
+          left: $spacing-md;
           
-          .metric-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-            background-color: rgba($primary, 0.1);
-            color: $primary;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: $spacing-md;
+          &::before {
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
           }
           
-          .metric-info {
-            flex: 1;
-            
-            .metric-label {
-              font-size: $font-size-xs;
-              color: $dark-gray;
-              margin-bottom: 2px;
-            }
-            
-            .metric-value {
-              font-weight: 600;
-              color: $text;
-            }
+          &::after {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+          }
+        }
+        
+        &.top-right {
+          top: $spacing-md;
+          right: $spacing-md;
+          
+          &::before {
+            top: 0;
+            right: 0;
+            width: 3px;
+            height: 100%;
           }
           
-          .metric-trend {
-            &.up {
-              color: $secondary;
-            }
-            
-            &.down {
-              color: #ef4444;
-            }
-            
-            font-size: $font-size-xs;
-            display: flex;
-            align-items: center;
-            gap: 2px;
+          &::after {
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 3px;
+          }
+        }
+        
+        &.bottom-left {
+          bottom: $spacing-md;
+          left: $spacing-md;
+          
+          &::before {
+            bottom: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+          }
+          
+          &::after {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+          }
+        }
+        
+        &.bottom-right {
+          bottom: $spacing-md;
+          right: $spacing-md;
+          
+          &::before {
+            bottom: 0;
+            right: 0;
+            width: 3px;
+            height: 100%;
+          }
+          
+          &::after {
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 3px;
           }
         }
       }
